@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- IMPORTANT for mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #ff758c, #ff7eb3);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Center container */
+.container {
+  margin-top: 60px;
+  padding: 10px;
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+/* Image styling */
+img {
+  width: 70%;
+  max-width: 220px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Message box */
+.message {
+  max-width: 90%;
+  margin: 20px auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Button */
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #ff4e75;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ffe0e6;
+}
+
+/* Hidden surprise */
+#surprise {
+  display: none;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* Floating balloons */
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  font-size: 30px;
+  animation: rise 6s linear infinite;
+}
+
+@keyframes rise {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-900px); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎂 Happy Birthday</h1>
+<h2>My Girl 💖</h2>
+
+<!-- Replace with your image -->
+<img src="C:\Users\WELCOME\Pictures\New folder\Screenshot_20260104-225359_Gallery.jpg" alt="Special Person">
+
+<div class="message">
+You are the reason behind my smile ❤️<br>
+Every moment with you is magical ✨<br>
+I wish your life is filled with happiness, love, and success with me my girl 💕
+</div>
+
+<button onclick="showSurprise()">Click for Birthday message 🎁</button>
+
+<div id="surprise">
+ 💖<br>
+ Manam kalisaka edhi 3rd birthday nedi, anthe manam kalisi 3 years avutondi 💕<br>
+ MY best friend, love, affection! ani oke ammaye lo dorikaye. <br>
+ mana paricham ni 2 parts ga divide chedam<br>
+ 1. Friendship<br>
+ 2. Relationship (or) Something<br>
+ 1). Friendship:<br>
+   na varaku nuve na first female besttt friend ramudu.<br> 
+   entha close ga appudu ee ammaye tho undaledhu,<br>
+   netho marriage aiyaka andariki chepukunta na best friend ee na wife ani.! 💖<br>
+ 2). Something:<br>
+  Andarlaga nenu antha love chestuna entha love chestuna ani chepalenu kani<br>
+  me parents ni ela ina opistha, edhi neku eche birthday promt my girl.! 🎂 <br>
+Rama devi kapil's wife ane daniki kosam chana wait chestuna, ala chestha.!<br>
+     Manam kalavali anthe kastam ee, kani esari fail avanu.! ❤️<br>
+  evi ani pakana pedite, nuvu anthe naku chana istham, adhimanam ramudu.! ❤️<br>
+  Nuvu entha hurt chesina, ne mood bagaleka natho harsh ga matladina, natho bitaki vastha<br>
+     ani last ki rakapoyena, nenu appudu appudu chese panulavala nuvu chiraku feel ina<br>
+                  Eni ina nenu malli vachesdi ne degarike...! ❤️<br> 
+          Na family tharavatha anthala adhimanichedi nene ramudu.!<br>
+         I will always be there for you at anywhere, any time...! <br>
+                                   AND<br>
+            Many many more happy happy returns offf the dayyyyy<br>
+                           RAMA DEVI KAPILESHWAR 💖                       
+</div>
+
+</div>
+
+<script>
+function showSurprise() {
+  document.getElementById("surprise").style.display = "block";
+}
+
+/* Balloon animation */
+setInterval(() => {
+  const balloon = document.createElement("div");
+  balloon.classList.add("balloon");
+  balloon.innerHTML = "🎈";
+  balloon.style.left = Math.random() * 100 + "vw";
+
+  document.body.appendChild(balloon);
+
+  setTimeout(() => {
+    balloon.remove();
+  }, 6000);
+
+}, 500);
+</script>
+
+</body>
+</html>
